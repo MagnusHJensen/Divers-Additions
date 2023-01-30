@@ -7,6 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -16,7 +17,7 @@ public class DiversAdditions {
     public static final String MOD_ID = "diversadditions";
     public static final CreativeModeTab DIVERS_TAB = new CreativeModeTab(MOD_ID) {
         @Override
-        public ItemStack makeIcon() {
+        public @NotNull ItemStack makeIcon() {
             return new ItemStack(DiverItems.FLIPPERS.get());
         }
     };
